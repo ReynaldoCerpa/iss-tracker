@@ -7,12 +7,12 @@
 </template>
 
 <script>
-import api from "./components/api.vue";
+import Api from "./components/Api.vue";
 
 export default {
   name: "App",
   components: {
-    api,
+    Api,
   },
 };
 </script>

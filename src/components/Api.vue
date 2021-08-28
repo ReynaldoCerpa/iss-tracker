@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "api",
+  name: "Api",
   data() {
     return {
       pos: 0,
