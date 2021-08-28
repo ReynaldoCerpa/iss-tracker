@@ -7,18 +7,12 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
 import Clock from "./components/Clock.vue";
-import Timer from "./components/Timer.vue";
-import Input from "./components/Input.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
     Clock,
-    Timer,
-    Input,
   },
 };
 </script>

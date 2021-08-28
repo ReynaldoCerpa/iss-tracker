@@ -1,5 +1,5 @@
 <template>
-  <h2>The time is {{ hours }} : {{ minutes }}</h2>
+  <h2>ISS Position: Latitude: {{ pos.iss_position.latitude }} longitude: {{ pos.iss_position.longitude }}</h2>
 </template>
 
 <script>
@@ -7,15 +7,17 @@ export default {
   name: "Clock",
   data() {
     return {
-      hours: 0,
-      minutes: 0,
+      pos: 0,
     };
   },
   created() {
-    setInterval(() => {
-      var date = new Date();
-      this.hours = date.getHours();
-      this.minutes = date.getMinutes();
+    setInterval(async () => {
+      // var date = new Date();
+      // this.hours = date.getHours();
+      // this.minutes = date.getMinutes();
+      const response = await fetch("http://api.open-notify.org/iss-now.json");
+      this.pos = await response.json();
+      this.totalVuePackages = this.pos.total;
     }, 1000);
   },
 };
