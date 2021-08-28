@@ -7,12 +7,12 @@
 </template>
 
 <script>
-import Clock from "./components/Clock.vue";
+import api from "./components/api.vue";
 
 export default {
   name: "App",
   components: {
-    Clock,
+    api,
   },
 };
 </script>
