@@ -43,4 +43,18 @@ html {
   width: 50%;
   height: 65%;
 }
+
+img {
+    position: relative;
+    animation: bounce 2.5s infinite alternate;
+    
+  }
+  @keyframes bounce {
+      from {
+          transform: translateY(0);
+      }
+      to {
+          transform: translateY(1.7rem);
+      }
+  }
 </style>

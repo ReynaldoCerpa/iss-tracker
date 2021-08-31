@@ -25,7 +25,7 @@ export default {
 
 <style>
   h1 {
-    margin-top: 2rem;
+    margin-top: 4rem;
     margin-bottom: 0;
     
   }
