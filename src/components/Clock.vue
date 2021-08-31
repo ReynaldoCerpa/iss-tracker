@@ -1,5 +1,8 @@
 <template>
-  <h2>ISS Position: Latitude: {{ pos.iss_position.latitude }} longitude: {{ pos.iss_position.longitude }}</h2>
+  <div id="text">
+    <h1>ISS Position</h1>
+    <h2>Latitude: <span>{{ pos.iss_position.latitude }}</span> Longitude: <span>{{ pos.iss_position.longitude }}</span> </h2>
+  </div>
 </template>
 
 <script>
@@ -12,9 +15,6 @@ export default {
   },
   created() {
     setInterval(async () => {
-      // var date = new Date();
-      // this.hours = date.getHours();
-      // this.minutes = date.getMinutes();
       const response = await fetch("http://api.open-notify.org/iss-now.json");
       this.pos = await response.json();
       this.totalVuePackages = this.pos.total;
@@ -22,3 +22,17 @@ export default {
   },
 };
 </script>
+
+<style>
+  h1 {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    
+  }
+  h2 {
+    height: 1rem;
+  }
+  span {
+    color: #2ea8ff;
+  }
+</style>
