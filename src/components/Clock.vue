@@ -25,12 +25,15 @@ export default {
 
 <style>
   h1 {
-    margin-top: 4rem;
-    margin-bottom: 0;
+    font-size: 2.4rem;
+    margin-top: 5rem;
+    margin-bottom: 0.5rem;
     
   }
   h2 {
+    font-size: 2.5rem;
     height: 1rem;
+    margin: 0;
   }
   span {
     color: #2ea8ff;
